@@ -1,0 +1,98 @@
+.content {
+  // .content__reviews
+
+  &__reviews {
+    @include adaptive-value("min-height", 601, 414, 1);
+    @include adaptive-value("padding-top", 167, 98, 1);
+    background: $gradientBunner;
+    position: relative;
+  }
+}
+.reviews {
+  // .reviews__container
+
+  &__container {
+  }
+
+  // .reviews__title
+
+  &__title {
+    @include adaptive-value("font-size", 45, 25, 1);
+    @include adaptive-value("margin-bottom", 77, 58, 1);
+    line-height: calc(55 / 45 * 100%);
+    text-align: center;
+    font-style: normal;
+    font-weight: 800;
+    color: #ffffff;
+  }
+}
+
+.reviews-slider {
+  display: block;
+  margin: 0 auto;
+  max-width: 826px;
+  // .reviews-slider__wrapper
+
+  &__wrapper {
+  }
+}
+
+.reviews-slide {
+  //
+  background: #ffffff;
+  max-width: 826px;
+  border-radius: 5px;
+  @include adaptive-value("padding-top", 83, 39, 1);
+  @include adaptive-value("padding-right", 152, 22, 1);
+  @include adaptive-value("padding-bottom", 42, 23, 1);
+  @include adaptive-value("padding-left", 152, 22, 1);
+  img {
+    position: absolute;
+    @include adaptive-value("left", 350, 125, 1);
+    @include adaptive-value("width", 135, 70, 1);
+    @include adaptive-value("top", -70, -35, 1);
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+  }
+  // .reviews-slide__title
+
+  &__title {
+    @include adaptive-value("font-size", 18, 12, 1);
+    @include adaptive-value("margin-bottom", 20, 12, 1);
+    text-align: center;
+    font-weight: 600;
+    line-height: calc(22 / 18 * 100%);
+    color: #2e3a59;
+  }
+
+  // .reviews-slide__content
+
+  &__content {
+    @include adaptive-value("font-size", 16, 10, 1);
+    font-weight: normal;
+    line-height: calc(20 / 16 * 100%);
+    text-align: center;
+    color: #2e3a59;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 115px !important;
+  height: 115px !important;
+  background-color: #eee;
+  border-radius: 15px;
+  transform: rotate(225deg);
+  position: relative;
+  &:hover {
+    background: linear-gradient(103.01deg, #0aa6fe -49.1%, #05ffff 177.15%);
+    box-shadow: 0px 4px 25px rgba(10, 166, 254, 0.48), inset 0px 0px 25px rgba(0, 50, 180, 0.3);
+  }
+  &::after {
+    transform: rotate(130deg);
+    color: #ffffff;
+    font-weight: 700;
+  }
+}
+
+.swiper-button-next {
+}

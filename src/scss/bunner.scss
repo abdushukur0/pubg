@@ -1,0 +1,194 @@
+@import "dots.scss";
+.content {
+  // .content__body
+
+  &__body {
+  }
+
+  // .content__bunner
+
+  &__bunner {
+    position: relative;
+    background: $gradientBunner;
+    min-height: 100vh;
+    @media (min-width: $md3+px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @media (min-aspect-ratio: 12/7) and (min-width: $md3+px) and (max-width: $maxWidthContainer+px) {
+      padding: 100px 0 0 0;
+      //background: #000;
+    }
+    .content__container {
+      display: flex;
+      flex: 0 1 100%;
+    }
+  }
+
+  // .content__bunner-content
+
+  &__bunner-content {
+    @media (max-width: $md3+px) {
+      @include adaptive-value("padding-top", 200, 100, 1);
+    }
+    flex: 0 1 680px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.bunner {
+  // .bunner__title
+
+  &__title {
+    font-style: normal;
+    position: relative;
+    font-weight: 800;
+    @include adaptive-value("font-size", 55, 25, 3);
+    line-height: calc(67 / 55 * 100%);
+    color: #ffffff;
+    @media (max-width: $md3+px) {
+      text-align: center;
+    }
+    @include adaptive-value("margin-bottom", 60, 30, 1);
+  }
+
+  // .bunner__subtitle
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: calc(22 / 18 * 100%);
+    @include adaptive-value("font-size", 18, 12, 3);
+    color: #ffffff;
+    @media (max-width: $md3+px) {
+      text-align: center;
+    }
+  }
+
+  // .bunner__btn
+
+  &__btn {
+  }
+}
+
+.bunner {
+  // .bunner__wawe
+
+  &__wawe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    left: 0;
+    background-image: url("../img/bunner/wawe.png");
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-position: bottom left;
+    @media (min-width: $md3+px) {
+      background-size: contain;
+    }
+    @media (max-width: $md3+px) {
+      background-size: inherit;
+      background-position: 20% 100%;
+    }
+  }
+
+  // .bunner__weapon
+
+  &__weapon {
+    max-width: 1442px;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url("../img/bunner/weapon.png");
+    background-repeat: no-repeat;
+    background-position: 10% 100%;
+    @media (max-width: $md3+px) {
+      background-position: 60px 100%;
+      background-size: 800px;
+    }
+    @media (max-width: $md4+px) {
+      background-position: 20px 100%;
+      background-size: 600px;
+    }
+    @media (min-width: $maxWidthContainer+200+px) {
+      background-size: 75%;
+    }
+  }
+
+  &__car {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @media (min-width: $md3+px) {
+      background-repeat: no-repeat;
+      background-image: url("../img/bunner/car.png");
+      background-position: 100% 60%;
+      background-size: inherit;
+    }
+    @media (max-width: $maxWidthContainer+px) {
+      background-size: 70%;
+    }
+    @media (min-width: $maxWidthContainer+px) {
+      background-size: 60%;
+    }
+  }
+}
+
+.bunner__text {
+  position: absolute;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  @include adaptive-value("font-size", 45, 20, 1);
+  color: rgba(255, 255, 255, 0.2);
+
+  transform: rotate(-16.17deg);
+}
+
+.bunner__text-3 {
+  left: 60.15%;
+  top: 16.86%;
+  //animation: text 20s linear infinite;
+}
+
+.bunner__text-2 {
+  left: 41%;
+  top: 61%;
+}
+
+.bunner__text-1 {
+  left: 20%;
+  top: 20%;
+}
+
+@keyframes text {
+  0% {
+    left: 10%;
+    top: 18%;
+  }
+  25% {
+    top: 30%;
+    left: 40%;
+  }
+  50% {
+    top: 70%;
+    left: 30%;
+  }
+  75% {
+    top: 90%;
+    left: 85%;
+  }
+  100% {
+    left: 10%;
+    top: 18%;
+  }
+}

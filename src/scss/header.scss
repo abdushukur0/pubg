@@ -1,0 +1,110 @@
+.header {
+  select,
+  option {
+    @include adaptive-value("width", 123, 66, 1);
+    @include adaptive-value("height", 58, 36, 1);
+    background: #ffffff;
+    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+  }
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 35px;
+  @media (max-width: $md2+px) {
+    min-height: 5px;
+  }
+  &._scroll {
+    .header__wrapper {
+      @include adaptive-value("padding-top", 25, 15, 1);
+      @include adaptive-value("padding-bottom", 20, 15, 1);
+      background: $gradientBunner;
+      box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+  // .header__wrapper
+  &__wrapper {
+    //background-color: #1a47ea;
+    transition: all 0.3s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    @include adaptive-value("padding-top", 50, 20, 1);
+    @include adaptive-value("padding-bottom", 25, 20, 1);
+  }
+}
+
+.header {
+  // .header__body
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__logo
+
+  &__logo {
+    //background: url("../img/logo.jpg") no-repeat center;
+    //@include adaptive-value("width", 70, 50, 1);
+    //background-size: 80%;
+    //@include adaptive-value("height", 70, 50, 1);
+    //border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    @include adaptive-value("font-size", 35, 25, 1);
+  }
+
+  // .header__manu
+
+  &__manu {
+  }
+}
+
+.icon-menu {
+}
+
+.menu {
+  // .menu__item
+  @media (max-width: $md3+px) {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    left: -100%;
+    transition: all 0.5s;
+    overflow: auto;
+    top: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-left: 20px;
+    flex-direction: column;
+    background-color: rgb(34, 201, 238, 0.8);
+    .menu__item {
+      @include adaptive-value("margin-bottom", 60, 25, 1);
+    }
+    &._active {
+      left: 0;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: calc(21 / 17 * 100%);
+    color: #fff !important;
+    @media (min-width: $md3+1+px) {
+      @include adaptive-value("margin-left", 81, 0, 1);
+      @include adaptive-value("font-size", 17, 10, 1);
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

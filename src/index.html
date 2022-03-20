@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title" : "PUBG"
+})
+
+<body>
+  <div class="_wrapper">
+    <header class="header">
+      @@include('html/header.html', {})
+    </header>
+
+    <main class="content">
+      <div class="content__body">
+        @@include('html/bunner.html', {})
+        <div class="content__container _container">
+          <div class="content__functions functions">
+            <div class="functions__funccional funccional">
+              <div class="funccional__bnn-conteiner">
+                <button class="funccional__item">
+                  @@include('img/windows.svg', {})
+                  windows
+                </button>
+                <button class="funccional__item">
+                  @@include('img/android.svg', {})
+                  android
+                </button>
+                <button class="funccional__item">
+                  @@include('img/apple.svg', {})
+                  ios
+                </button>
+              </div>
+              <div class="funccional__smartphonte-img">
+                <img src="@img/smartphone.png" alt="PHONE">
+              </div>
+            </div>
+            <div class="functions__info info-funccional">
+              <div class="info-funccional__title _lines">ФУНКЦИОНАЛ</div>
+              <div class="info-funccional__subtitle">
+                Уникальный чит на iOS Android и Windows подойдет для всех устройств
+                начиная от айфона 4S+.
+              </div>
+              <div class="info-funccional__list">
+                <ul>
+                  <li class="info-funccional__list-item">
+                    <b>WallHack</b> - обнаруживает противников сквозь стены.
+                  </li>
+                  <li class="info-funccional__list-item">
+                    <b>AntiRecoil</b> - отключает отдачу на любом оружие.
+                  </li>
+                  <li class="info-funccional__list-item">
+                    <b>Aimbot</b> - автоматически наводит прицел на противника.
+                  </li>
+                  <li class="info-funccional__list-item">
+                    <b>Drop</b> - показывает топовые вещи сквозь стены.
+                  </li>
+                </ul>
+              </div>
+              <div class="info-funccional__denger-text">Рекомендуем, оставить стандартные параметры в чите</div>
+              <div class="info-funccional__btns">
+                <button class="info-funccional__btn-1 _btn-buy">Купить</button>
+                <button class="info-funccional__btn-2 _btn-video-2">Посмотреть видео</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="content__reviews reviews">
+          @@include('html/dots.html', {
+          "text1": "",
+          "text2": "",
+          "text3": ""
+          })
+          <div class="reviews__container _container">
+            <h2 class="reviews__title">ЧТО ГОВОРЯТ О НАС</h2>
+            @@include('html/slider.html', {})
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      @@include('html/footer.html', {})
+    </footer>
+  </div>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
