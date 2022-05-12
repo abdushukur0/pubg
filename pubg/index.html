@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220303230945">
-  <link rel="stylesheet" href="css/swiper.css?_v=20220303230945">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <link rel="icon" type="image/x-icon" href="files/favicon.ico">
   <title>PUBG</title>
 </head>
@@ -34,7 +34,7 @@
       </nav>
       <select name="lenguage" id="lenguage">
         <option selected value="ru">
-          <picture><source srcset="img/flags/ru.webp" type="image/webp"><img src="img/flags/ru.png" alt="RUSSIAN"></picture>
+          <img src="img/flags/ru.png" alt="RUSSIAN">
           RU
         </option>
       </select>
@@ -411,7 +411,7 @@
                 </button>
               </div>
               <div class="funccional__smartphonte-img">
-                <picture><source srcset="img/smartphone.webp" type="image/webp"><img src="img/smartphone.png" alt="PHONE"></picture>
+                <img src="img/smartphone.png" alt="PHONE">
               </div>
             </div>
             <div class="functions__info info-funccional">
@@ -768,7 +768,7 @@
     <!-- Слайдер -->
     <div class="reviews-slider-slide reviews-slide swiper-slide">
       <!-- Контент -->
-      <picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="no img"></picture>
+      <img src="img/reviews/01.png" alt="no img">
       <div class="reviews-slide__title">Егор Черняев</div>
       <div class="reviews-slide__content">
         Рекомендую данный софт! Аналогов не нашел нигде, я решил не
@@ -779,7 +779,7 @@
 
     <div class="reviews-slider-slide reviews-slide swiper-slide">
       <!-- Контент -->
-      <picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="no img"></picture>
+      <img src="img/reviews/01.png" alt="no img">
       <div class="reviews-slide__title">Егор Черняев</div>
       <div class="reviews-slide__content">
         Рекомендую данный софт! Аналогов не нашел нигде, я решил не
@@ -790,7 +790,7 @@
 
     <div class="reviews-slider-slide reviews-slide swiper-slide">
       <!-- Контент -->
-      <picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="no img"></picture>
+      <img src="img/reviews/01.png" alt="no img">
       <div class="reviews-slide__title">Егор Черняев</div>
       <div class="reviews-slide__content">
         Рекомендую данный софт! Аналогов не нашел нигде, я решил не
@@ -801,7 +801,7 @@
 
     <div class="reviews-slider-slide reviews-slide swiper-slide">
       <!-- Контент -->
-      <picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.png" alt="no img"></picture>
+      <img src="img/reviews/01.png" alt="no img">
       <div class="reviews-slide__title">Егор Черняев</div>
       <div class="reviews-slide__content">
         Рекомендую данный софт! Аналогов не нашел нигде, я решил не
@@ -810,15 +810,16 @@
       </div>
     </div>
     <!-- Добавление если нам нужны стрелки -->
+    <!-- 
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+   -->
 
+    <div class="swiper-pagination"></div>
   </div>
-
   <!-- так далее -->
 </div>
-<div class="arrow__container">
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
+
 </div>
           </div>
         </div>
@@ -1149,8 +1150,8 @@
 </div>
     </footer>
   </div>
-  <script src="js/swiper.min.js?_v=20220303230945"></script>
-  <script src="js/script.min.js?_v=20220303230945"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
